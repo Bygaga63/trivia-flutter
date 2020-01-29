@@ -2,8 +2,7 @@ import 'package:clean_architecture_tdd/features/number_trivia/domain/entities/nu
 import 'package:flutter/cupertino.dart';
 
 class NumberTriviaModel extends NumberTrivia {
-  NumberTriviaModel({@required String text, @required int number})
-      : super(text: text, number: number);
+  NumberTriviaModel({@required String text, @required int number});
 
   factory NumberTriviaModel.fromJson(Map<String, dynamic> json) {
     return NumberTriviaModel(
@@ -16,4 +15,7 @@ class NumberTriviaModel extends NumberTrivia {
       'number': number,
     };
   }
+
+  @override
+  List<Object> get props => [text, number];
 }

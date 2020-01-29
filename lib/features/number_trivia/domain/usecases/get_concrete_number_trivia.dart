@@ -21,5 +21,8 @@ class Params extends Equatable {
   @required
   final int number;
 
-  Params({this.number}) : super([number]);
+  Params({this.number});
+
+  @override
+  List<Object> get props => [number];
 }
