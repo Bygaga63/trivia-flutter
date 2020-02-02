@@ -30,7 +30,7 @@ class Error extends NumberTriviaState {
   @required
   final String message;
 
-  Error(this.message);
+  Error({this.message});
 
   @override
   List<Object> get props => [this.message];
